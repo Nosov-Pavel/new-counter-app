@@ -18,9 +18,9 @@ function App() {
         <button onClick={() => plusMinusCounter(-2, index)}>-2</button>
         <button onClick={() => plusMinusCounter(-1, index)}>-1</button>
         {el}
-        <button onClick={() => plusMinusCounter(+1, index)}>+1</button>
-        <button onClick={() => plusMinusCounter(+2, index)}>+2</button>
-        <button onClick={() => plusMinusCounter(+3, index)}>+3</button>
+        <button onClick={() => plusMinusCounter(1, index)}>+1</button>
+        <button onClick={() => plusMinusCounter(2, index)}>+2</button>
+        <button onClick={() => plusMinusCounter(3, index)}>+3</button>
       </div>)}
       
     </div>
