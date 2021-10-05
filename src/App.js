@@ -8,11 +8,11 @@ function App() {
     const newArr = numbers.map((el, i) => index === i ? el+value: el)
     setNumbers(newArr)
     }
-    const moveUpDown = (index) => {
+    const moveUpDown = (direction, index) => {
     const temporary = numbers[index]
       const newArr = [...numbers]
-      newArr[index] = newArr[index+1]
-      newArr[index+1]=temporary
+      newArr[index] = newArr[index+direction]
+      newArr[index+direction]=temporary
       setNumbers(newArr)
     }
   
@@ -29,8 +29,8 @@ function App() {
         <button onClick={() => plusMinusCounter(2, index)}>+2</button>
         <button onClick={() => plusMinusCounter(3, index)}>+3</button>
         {' '}
-        <button>↑</button>
-        <button onClick={()=> moveUpDown(index)}>↓</button>
+        <button onClick={()=> moveUpDown(1, index)}>↑</button>
+        <button onClick={()=> moveUpDown(-1, index)}>↓</button>
       </div>)}
 
     </div>
