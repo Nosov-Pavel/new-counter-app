@@ -2,7 +2,7 @@ import './App.css';
 import {useState} from "react";
 function App() {
   
-  const [numbers, setNumbers] = useState([1, 2, 3])
+  const [numbers, setNumbers] = useState([1, 2, 3, 4, 5])
 
   const plusMinusCounter = (value, index) => {
     const newArr = numbers.map((el, i) => index === i ? el+value: el)
@@ -29,8 +29,8 @@ function App() {
         <button onClick={() => plusMinusCounter(2, index)}>+2</button>
         <button onClick={() => plusMinusCounter(3, index)}>+3</button>
         {' '}
-        <button onClick={()=> moveUpDown(1, index)}>↑</button>
-        <button onClick={()=> moveUpDown(-1, index)}>↓</button>
+        <button onClick={()=> moveUpDown(-1, index)} disabled={index===0}>↑</button>
+        <button onClick={()=> moveUpDown(1, index)} disabled={index===numbers.length-1}>↓</button>
       </div>)}
 
     </div>
