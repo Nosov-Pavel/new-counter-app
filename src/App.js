@@ -6,7 +6,13 @@ function App(){
     const plusMinusCounter = (value, index) => {
         const newArr = numbers.map((el, i) => index === i ? el+value: el)
         setNumbers(newArr)
-
+    }
+    const moveUpDown = (direction, index) => {
+        const temporary = numbers[index]
+        const newArr = [...numbers]
+        newArr[index] = newArr[index+direction]
+        newArr[index+direction]=temporary
+        setNumbers(newArr)
     }
 
     return(
@@ -21,8 +27,8 @@ function App(){
                 <button onClick={() => plusMinusCounter(2, index)}>2</button>
                 <button onClick={() => plusMinusCounter(3, index)}>3</button>
                 {" "}
-                <button>↑</button>
-                <button>↓</button>
+                <button onClick={() => moveUpDown(-1, index)} disabled={index===0}>↑</button>
+                <button onClick={() => moveUpDown(1, index)} disabled={index===numbers.length-1}>↓</button>
 
             </div>)}
 
