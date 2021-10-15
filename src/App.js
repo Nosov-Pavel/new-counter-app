@@ -1,15 +1,14 @@
 import {useState} from "react";
 
 function App(){
-    const [numbers, setNumbers] = useState([1, 2, 3, 4, 5, 6, 7])
-
+    // const [numbers, setNumbers] = useState([1, 2, 3, 4, 5, 6, 7])
     // const plusMinusCounter = (value, index) => {
     //     const newArr = numbers.map((el, i) => index === i ? el+value: el)
     //     setNumbers(newArr)
     // }
+    const [numbers, senNumbers] = useState([1, 2, 3, 4, 5])
     const plusMinusCounter = (value, index) => {
         const newArr = numbers.map((el, i) => index === i ? el+value: el)
-        setNumbers(newArr)
     }
     const moveUpDown = (direction, index) => {
         const temporary = numbers[index]
