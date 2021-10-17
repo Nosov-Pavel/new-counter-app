@@ -37,7 +37,7 @@ function App() {
                     <button>Reset</button>
                 </div>
             )}
-            <button>AddNumber</button>
+            <button onClick={addNumber}>AddNumber</button>
 
 
         </div>
