@@ -19,6 +19,10 @@ function App() {
         setNumbers([...numbers, 0])
 
     }
+    const adN = () => {
+        setNumbers([...numbers,1])
+
+    }
 
  }
     return (
@@ -39,6 +43,7 @@ function App() {
                 </div>
             )}
             <button onClick={addNumber}>AddNumber</button>
+            <button onClick={adN}>add</button>
 
 
         </div>
