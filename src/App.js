@@ -19,10 +19,8 @@ function App() {
         setNumbers([...numbers, 0])
 
     }
-    const adN = () => {
-        setNumbers([...numbers,1])
+   const reset = () => {
 
-    }
 
  }
     return (
