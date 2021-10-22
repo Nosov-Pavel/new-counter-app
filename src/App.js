@@ -19,6 +19,10 @@ function App() {
         setNumbers([...numbers, 0])
 
     }
+    const remove = (index) => {
+        setNumbers
+
+    }
    const reset = (index) => {
         const newArr = numbers.map((el, i) => index === i ? 0: el)
        setNumbers(newArr)
@@ -39,6 +43,7 @@ function App() {
                     {" "}
                     <button onClick={() => moveUpDown(-1, index)} disabled={index === 0}>↑</button>
                     <button onClick={() => moveUpDown(1, index)} disabled={index === numbers.length - 1}>↓</button>
+                    <button onClick={() => remove(index)}>Remove</button>
                     <button onClick={() => reset(index)}>Reset</button>
                 </div>
             )}
