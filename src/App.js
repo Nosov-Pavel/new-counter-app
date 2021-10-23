@@ -20,7 +20,8 @@ function App() {
 
     }
     const remove = (index) => {
-        setNumbers
+        const newArr = numbers.filter((el, ind) => ind !== index)
+        setNumbers(newArr)
 
     }
    const reset = (index) => {
