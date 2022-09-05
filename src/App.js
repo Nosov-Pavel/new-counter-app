@@ -2,11 +2,19 @@
 import {useState} from "react";
 
 function App() {
-    const [numbers, setNumbers] = useState([1, 2, 3, 4, 5, 6, 7])
+    // const [numbers, setNumbers] = useState([1, 2, 3, 4, 5, 6, 7])
+    // const plusMinusCounter = (value, index) => {
+    //     const newArr = numbers.map((el, i) => index === i ? el + value : el)
+    //     setNumbers(newArr)
+    // }
+    const [numbers, setNumbers] = useState([1, 2, 3, 4, 5])
     const plusMinusCounter = (value, index) => {
-        const newArr = numbers.map((el, i) => index === i ? el + value : el)
+        const newArr = numbers.map((el, i) => index === i ? el + value: el)
         setNumbers(newArr)
     }
+    const [numb, setNumb] = useState([A, B, C])
+
+
 
     const moveUpDown = (direction, index) => {
         const temporary = numbers[index]
@@ -33,6 +41,7 @@ function App() {
     return (
         <div>
             <h1>CALCULATOR</h1>
+            {numb.map((el, index) => <div></div>)}
             {numbers.map((el, index) => <div key={index}>
                     <button onClick={() => plusMinusCounter(-3, index)}>-3</button>
                     <button onClick={() => plusMinusCounter(-2, index)}>-2</button>
